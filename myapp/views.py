@@ -5,9 +5,6 @@ from .models import Image
 def home(request):
     if request.method == "POST":
         form = ImageForm(request.POST, request.FILES)
-        print("**********")
-        print(request.FILES)
-        print("**********")
         if form.is_valid():
             form.save()
     form = ImageForm()
